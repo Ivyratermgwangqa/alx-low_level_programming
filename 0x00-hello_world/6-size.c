@@ -3,15 +3,14 @@
  * main - Entry
  * Return: 0 (Success)
  */
-int main (void)
+int main(void)
 {
-	char a;
-	int b;
-	long int x;
-	long int y;
-	float c;
-
-printf("size of a char: %lu byte(s)\n", (unsigned long)sizeof(a)); 
+char a;
+int b;
+long int x;
+long int y;
+float c;
+printf("size of a char: %lu byte(s)\n", (unsigned long)sizeof(a));
 printf("Size of a int: %lu byte(s)\n", (unsigned long)sizeof(b));
 printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(x));
 printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(y));
