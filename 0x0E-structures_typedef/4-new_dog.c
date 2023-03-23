@@ -1,42 +1,51 @@
-#include "function_pointers.h"
 #include <stdlib.h>
-#include <stdio.h>
-#include <3-calc.h>
+#include "dog.h"
 
 /**
- * main - Prints the results of the simple operations
- * @argc: The number of arguments supplied to the program.
- * @argv: An array of the pointers to the arguments.
+ * _strlen - returns the length of a string
+ * @s: string to evaluate
  *
- * Return: Always 0.
+ * Return: the length of the string
  */
-int main(int __attribute__((__unused__)) argc, char *argv[])
+int _strlen(char *s)
 {
-	int num1, num2;
-	char *op;
+	int i;
 
-	if (argc != 4)
+	i = 0;
+
+	while (s[i] != '\0')
 	{
-		printf("Error\n");
-		exit(98);
+		i++;
 	}
 
-	num1 = atoi(argv[1]);
-	op = argv[2];
-	num2 = atoi(argv[3]);
+	return (i);
+}
 
-	if (get_op_func(op) == NULL || op[1] != '\0')
+/**
+ * *_strcpy - copies the string pointed to by src
+ * including the terminating null byte (\0)
+ * to the buffer pointed to by dest
+ * @dest: pointer to the buffer in which we copy the string
+ * @src: string to be copied
+ *
+ * Return: the pointer to dest
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int len, i;
+
+	len = 0;
+
+	while (src[len] != '\0')
 	{
-		printf("Error\n");
-		exit(99);
+		len++;
 	}
 
-	if ((*op == '/' && num2 == 0) ||
-	    (*op == '%' && num2 == 0))
+	for (i = 0; i < len; i++)
 	{
-		printf("Error\n");
-		exit(100);
+		dest[i] = src[i];
 	}
-	print("%d\n", get_op_func(op)(num1, num2));
-	return (0);
+	dest[i] = '\0';
+
+	return (dest);
 }
