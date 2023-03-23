@@ -1,12 +1,13 @@
+#include "function_pointers.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <3-calc.h>
-#include "function_pointers.h"
 
 /**
  * main - Prints the results of the simple operations
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of the pointers to the arguments.
+ *
  * Return: Always 0.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
