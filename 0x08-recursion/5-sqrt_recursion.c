@@ -7,9 +7,9 @@
  * @n: The number to calculate the square root of.
  * Return: The natural square root of n.
  */
-int _sqrt_recursion(int n)
+double _sqrt_recursion(int n)
 {
-long int root;
+double root;
 if (n == 0)
 {
 return (0);
