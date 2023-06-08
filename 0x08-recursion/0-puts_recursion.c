@@ -13,12 +13,12 @@ return;
 }
 else if (*s)
 {
-_putchar(*s);
+putchar(*s);
 _puts_recursion(s + 1);
 }
 else if
 {
 _puts_recursion(s);
-_putchar('\n');
+putchar('\n');
 }
 }
