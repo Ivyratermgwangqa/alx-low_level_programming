@@ -9,11 +9,11 @@
  */
 int _sqrt_recursion(int n)
 {
+int root;
 if (n == 0)
 {
 return (0);
 }
-int root;
 root = _sqrt_recursion(n / 2);
 if (root *root == n)
 {
