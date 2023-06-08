@@ -22,7 +22,6 @@ return (0);
 }
 return (is_prime_number(n, i + 1));
 }
-int is_prime_number(int n, int i);
 /**
  * is_prime - calculates if a number is prime recursively
  * @n: number to evaluate
