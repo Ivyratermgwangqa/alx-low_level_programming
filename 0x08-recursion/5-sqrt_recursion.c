@@ -13,12 +13,13 @@ if (n == 0)
 {
 return (0);
 }
-int root = _sqrt_recursion(n / 2);
-if (root * root == n)
+int root;
+root = _sqrt_recursion(n / 2);
+if (root *root == n)
 {
 return (root);
 }
-else if (root * root < n)
+else if (root *root < n)
 {
 return (root + 1);
 }
