@@ -11,12 +11,14 @@ if (*s == '\0')
 {
 return;
 }
-if (*s)
+else if (*s)
 {
 _putchar(*s);
 _puts_recursion(s + 1);
 }
-else
+else if
+{
 _puts_recursion(s);
 _putchar('\n');
+}
 }
