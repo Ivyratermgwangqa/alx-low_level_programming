@@ -3,7 +3,7 @@
 
 /**
  * factorial - return numbers factorial.
- * @n; bnumber to return the factorial from
+ * @n: number to return the factorial from
  * Return: factorial of n
  */
 
