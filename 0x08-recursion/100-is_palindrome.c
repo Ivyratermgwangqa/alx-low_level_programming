@@ -8,22 +8,16 @@
 int is_palindrome(char *str)
 {
 int length = strlen(str);
-int start = 0;
-int end = length - 1;
-while (start < end)
+int i = 0;
+int j = length - 1;
+while (i < j)
 {
-char temp = str[start];
-str[start] = str[end];
-str[end] = temp;
-start++;
-end--;
-}
-for (int i = 0; i < length; i++)
-{
-if (str[i] != str[length - 1 - i])
+if (str[i] != str[j])
 {
 return (0);
 }
+i++;
+j--;
 }
 return (1);
 }
