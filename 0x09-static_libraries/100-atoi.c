@@ -10,7 +10,7 @@ int _atoi(char *s)
 {
 int res = 0;
 int neg = 1;
-while (*s == ' ' || *str == '\t')
+while (*s == ' ' || *s == '\t')
 {
 s++;
 }

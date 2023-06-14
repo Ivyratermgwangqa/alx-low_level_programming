@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
  * _strstr - Locates first occurrence of substring needle in string haystack
  *
@@ -30,5 +30,5 @@ return (p);
 }
 p++;
 }
-return (NULL);
+return (0);
 }
