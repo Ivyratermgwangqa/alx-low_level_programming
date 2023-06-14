@@ -4,13 +4,20 @@
 /**
  * main - Entry point of the program
  *
- * @argc: The number of command line arguments (unused)
+ * @argc: The number of command line arguments
  * @argv: An array of strings containing the command line arguments
  *
  * Return: Always returns 0
  */
-int main(int argc __attribute__((unused)), char *argv[])
+int main(int argc, char *argv[])
 {
-printf("%s\n", *argv);
+if (argc == 1)
+{
+return (0);
+}
+for (int i = 1; i < argc; i++)
+{
+printf("%s\n", argv[i]);
+}
 return (0);
 }
