@@ -9,15 +9,8 @@
  *
  * Return: Always returns 0
  */
-int main(int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-if (argc == 1)
-{
-return (0);
-}
-for (int i = 1; i < argc; i++)
-{
-printf("%s\n", argv[i]);
-}
+printf("%s\n", *argv);
 return (0);
 }
