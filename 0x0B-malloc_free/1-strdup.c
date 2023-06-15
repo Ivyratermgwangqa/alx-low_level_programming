@@ -22,6 +22,6 @@ dup = malloc(sizeof(char) * (len + 1));
 if (dup == NULL)
 return (NULL);
 for (i = 0; i <= len; i++)
-up[i] = str[i];
+dup[i] = str[i];
 return (dup);
 }
