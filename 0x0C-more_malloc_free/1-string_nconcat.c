@@ -26,7 +26,7 @@ if (concaten == NULL)
 return (NULL);
 for (i = 0; i < len1; i++)
 concaten[i] = s1[i];
-for (; i < len1 + n; i++)
+for (i = 0; i < len1 + n; i++)
 concaten[i] = s2[i - len1];
 concaten[i] = '\0';
 return (concaten);
