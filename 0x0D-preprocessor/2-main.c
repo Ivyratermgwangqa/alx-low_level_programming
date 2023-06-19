@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * main - Print the name of the file compiled from,followed by a new line
+ * main - Print the name of the file compiled from.
  *
  * Return: 0
  */
 int main(void)
 {
-printf("File: %s\n", __FILE__);
+printf("%s\n", __FILE__);
 return (0);
 }
