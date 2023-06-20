@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - Print the name of the file compiled from.
+ * main - Print the name of the file compiled from,follwed by newline.
  *
  * Return: 0
  */
