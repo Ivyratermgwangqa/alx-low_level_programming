@@ -5,8 +5,6 @@
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
- *
- * structure: Data structure representing a dog.
  */
 struct dog {
 char *name;
