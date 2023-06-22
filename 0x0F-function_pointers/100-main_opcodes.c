@@ -21,9 +21,9 @@ if (bytes < 0)
 printf("Error\n");
 exit(2);
 }
-printf("%02i", *((unsigned char *)(main)));
+printf("%02x", *((unsigned char *)(main)));
 for (i = 1; i < bytes; ++i)
-printf(" %02i", *((unsigned char *)(main + i)));
+printf(" %02x", *((unsigned char *)(main + i)));
 putchar('\n');
 return (0);
 }
