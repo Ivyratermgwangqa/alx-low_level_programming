@@ -13,17 +13,17 @@ short bytes, x;
 if (argc != 2)
 {
 printf("Error\n");
-return (1);
+exit(1);
 }
 bytes = atoi(argv[1]);
 if (bytes < 0)
 {
 printf("Error\n");
-return (2);
+exit(2);
 }
-printf("%02x", *((unsigned char *)(main)));
-for (x = 1; x < bytes; ++x)
-printf(" %02x", *((unsigned char *)(main + x)));
+printf("%02i", *((unsigned char *)(main)));
+for (i = 1; i < bytes; ++i)
+printf(" %02i", *((unsigned char *)(main + i)));
 putchar('\n');
 return (0);
 }
