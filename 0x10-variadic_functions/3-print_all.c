@@ -9,28 +9,28 @@ void print_all(const char * const format, ...)
 {
 int j = 0;
 int space = 0;
-va_list lists;
+va_list valists;
 char *sepstr, *seperator = "";
 char choice;
-va_start(list, format);
+va_start(lists, format);
 while ((choice = format[j]) != '\0')
 {
 switch (choice)
 {
 case 'c':
-printf("%s%c", seperator, va_list(lists, int));
+printf("%s%c", seperator, valist(lists, int));
 space++;
 break;
 case 'i':
-printf("%s%d", seperator, va_list(lists, int));
+printf("%s%d", seperator, valist(lists, int));
 space++;
 break;
 case 'f':
-printf("%s%f", seperator, va_list(lists, double));
+printf("%s%f", seperator, valist(lists, double));
 space++;
 break;
 case 's':
-sepstr = va_list(lists, char *);
+sepstr = valist(lists, char *);
 if (!sepstr)
 sepstr = "(nil)";
 printf("%s%s", seperator, sepstr);
