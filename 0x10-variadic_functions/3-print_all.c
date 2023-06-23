@@ -12,25 +12,25 @@ int space = 0;
 va_list args;
 char *sepstr, *seperator = "";
 char choice;
-va_start(list, format);
+va_start(args, format);
 while ((choice = format[j]) != '\0')
 {
 switch (choice)
 {
 case 'c':
-printf("%s%c", seperator, va_arg(list, int));
+printf("%s%c", seperator, va_arg(args, int));
 space++;
 break;
 case 'i':
-printf("%s%d", seperator, va_arg(list, int));
+printf("%s%d", seperator, va_arg(args, int));
 space++;
 break;
 case 'f':
-printf("%s%f", seperator, va_arg(list, double));
+printf("%s%f", seperator, va_arg(args, double));
 space++;
 break;
 case 's':
-sepstr = va_arg(list, char *);
+sepstr = va_arg(args, char *);
 if (!sepstr)
 sepstr = "(nil)";
 printf("%s%s", seperator, sepstr);
@@ -45,5 +45,5 @@ seperator = ", ";
 j++;
 }
 printf("\n");
-va_end(list);
+va_end(args);
 }
