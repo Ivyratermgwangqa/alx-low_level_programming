@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
 * print_all - prints anything
-* @format: list of types of arguments passed to the function
+* @form:Type list of arg CIFS.
 */
 void print_all(const char * const format, ...)
 {
@@ -31,8 +31,6 @@ if (!sepstr)
 sepstr = "(nil)";
 printf("%s%s", seperator, sepstr);
 break;
-default:
-j++;
 }
 seperator = ", ";
 j++;
