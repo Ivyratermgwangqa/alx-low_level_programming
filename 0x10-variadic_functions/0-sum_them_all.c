@@ -19,7 +19,7 @@ va_start(list, n);
 sum = i = 0;
 while (i < n)
 {
-sum = sum + va_arg(valist, int);
+sum = sum + va_arg(list, int);
 i++;
 }
 va_end(list);
