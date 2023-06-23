@@ -7,14 +7,15 @@
 */
 void print_all(const char * const format, ...)
 {
-int j = 0;
 int space = 0;
 va_list args;
-char *sepstr, *seperator = "";
+const char *sepstr = format;
+char *seperator = "";
 char choice;
 va_start(args, format);
-while ((choice = format[j]) != '\0')
+while (sepstr && *sepstr)
 {
+choice = *sepstr
 switch (choice)
 {
 case 'c':
@@ -22,7 +23,7 @@ printf("%s%c", seperator, va_arg(args, int));
 space++;
 break;
 case 'i':
-printf("%s%i", seperator, va_arg(args, int));
+printf("%s%d", seperator, va_arg(args, int));
 space++;
 break;
 case 'f':
@@ -38,12 +39,12 @@ space++;
 break;
 }
 default:
-j++
+sepstr;
 continue;
 }
 if (space > 0 && space < 4)
 seperator = ", ";
-j++;
+sepstr;
 }
 printf("\n");
 va_end(args);
