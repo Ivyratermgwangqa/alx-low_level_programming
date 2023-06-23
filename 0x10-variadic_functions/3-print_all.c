@@ -8,30 +8,39 @@
 void print_all(const char * const format, ...)
 {
 int j = 0;
-va_list list;
+int space = 0;
+va_list lists;
 char *sepstr, *seperator = "";
+char choice;
 va_start(list, format);
-while (1)
+while ((choice = format[j]) != '\0')
 {
-char specif = format[j];
-switch (specif)
+switch (choice)
 {
 case 'c':
-printf("%s%c", sep, va_list(list, int));
+printf("%s%c", seperator, va_list(lists, int));
+space++;
 break;
 case 'i':
-printf("%s%d", sep, va_list(list, int));
+printf("%s%d", seperator, va_list(lists, int));
+space++;
 break;
 case 'f':
-printf("%s%f", sep, va_list(list, double));
+printf("%s%f", seperator, va_list(lists, double));
+space++;
 break;
 case 's':
-sepstr = va_list(list, char *);
+sepstr = va_list(lists, char *);
 if (!sepstr)
 sepstr = "(nil)";
 printf("%s%s", seperator, sepstr);
+space++;
 break;
 }
+default:
+break;
+}
+if (space > 0 && space < 4)
 seperator = ", ";
 j++;
 }
