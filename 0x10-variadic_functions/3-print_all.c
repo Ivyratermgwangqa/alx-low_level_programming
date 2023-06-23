@@ -3,17 +3,17 @@
 #include <stdio.h>
 /**
 * print_all - prints anything
-* @form:Type list of arg CIFS.
+* @format:Type list of arg CIFS.
 */
 void print_all(const char * const format, ...)
 {
 int j = 0;
 va_list list;
 char *sepstr, *seperator = "";
-va_start(list, form);
+va_start(list, format);
 while (1)
 {
-char specif = form[j];
+char specif = format[j];
 switch (specif)
 {
 case 'c':
