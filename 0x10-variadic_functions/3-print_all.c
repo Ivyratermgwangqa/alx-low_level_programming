@@ -16,8 +16,6 @@ while (1)
 char specif = form[j];
 switch (specif)
 {
-case '\0':
-goto end;
 case 'c':
 printf("%s%c", sep, va_arg(list, int));
 break;
@@ -40,7 +38,6 @@ continue;
 seperator = ", ";
 j++;
 }
-end:
 printf("\n");
 va_end(list);
 }
