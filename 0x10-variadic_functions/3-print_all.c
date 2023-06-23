@@ -38,7 +38,8 @@ space++;
 break;
 }
 default:
-break;
+j++
+continue;
 }
 if (space > 0 && space < 4)
 seperator = ", ";
