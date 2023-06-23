@@ -17,16 +17,16 @@ char specif = format[j];
 switch (specif)
 {
 case 'c':
-printf("%s%c", sep, va_arg(list, int));
+printf("%s%c", sep, va_list(list, int));
 break;
 case 'i':
-printf("%s%d", sep, va_arg(list, int));
+printf("%s%d", sep, va_list(list, int));
 break;
 case 'f':
-printf("%s%f", sep, va_arg(list, double));
+printf("%s%f", sep, va_list(list, double));
 break;
 case 's':
-sepstr = va_arg(list, char *);
+sepstr = va_list(list, char *);
 if (!sepstr)
 sepstr = "(nil)";
 printf("%s%s", seperator, sepstr);
