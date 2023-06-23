@@ -33,7 +33,6 @@ printf("%s%s", seperator, sepstr);
 break;
 default:
 j++;
-continue;
 }
 seperator = ", ";
 j++;
