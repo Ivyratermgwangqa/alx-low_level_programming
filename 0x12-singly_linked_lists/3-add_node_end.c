@@ -1,17 +1,4 @@
 #include "lists.h"
-/**i
- * _strlen - Returns the lenght of a string.
- * @s: Type char pointer
- * Return: Always 0.
- */
-unsigned int _strlen(const char *s)
-{
-	unsigned int len = 0;
-
-	while (s[len] != '\0')
-		len++;
-	return (len);
-}
 /**
  * *add_node_end - Returns the lenght of a string.
  * @str: char pointer
@@ -20,24 +7,37 @@ unsigned int _strlen(const char *s)
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *node, *tmp;
+	list_t *new_node, *temp;
+	size_t numr_node;
 
-	node = malloc(sizeof(list_t));
-	if (node == NULL)
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 		return (NULL);
-	node->str = strdup(str);
-	node->len = _strlen(str);
-	node->next = NULL;
-	if (!*head)
+
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
 	{
-		*head = node;
+		free(new_node);
+		return (NULL);
+	}
+
+	for (num_node = 0; str[num_node]; num_node++)
+		;
+
+	new_node->len = num_node;
+	new_node->next = NULL;
+
+	if (*head == NULL)
+	{
+		*head = new_node;
 	}
 	else
 	{
-		tmp = *head;
-		while (tmp->next)
-			tmp = tmp->next;
-		tmp->next = node;
+		temp = *head;
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new_node;
 	}
-	return (node);
+
+	return (*head);
 }
