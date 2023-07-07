@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * flip_bits - counts the number of bits to change
- * @n: firts num
+ * flip_bits -  function calc the Hamming distance between two num (n and m)
+ * @n: first num
  * @m: second num
  * Return: number of bits to change
  */

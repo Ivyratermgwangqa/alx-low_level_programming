@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * set_bit - sets the value of a bit to 1 at a given index
+ * set_bit - function that set the val of bit to 0 at given index.
  * @n: type unsigned long int input pointer
  * @index: type unsigned int position of unit
  * Return: 1 if works -1 if not

@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * get_bit - return the value of a bit in a given index
+ * get_bit - function that returns the value of a bit at a given index.
  * @n: type unsigned long int input
- * @index: type unsigned int position of unit
+ * @index: is the index, starting from 0 of the bit you want to get
  * Return: the value of a bit in an index or -1 if an error occurs
  */
 int get_bit(unsigned long int n, unsigned int index)
