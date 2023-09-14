@@ -134,34 +134,21 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  * @ht: pointer to the sorted hash table
  * @direction: 0 for normal, 1 for reverse
  */
-void shash_table_print(const shash_table_t *ht, int direction)
+void shash_table_print(const shash_table_t *ht)
 {
-	shash_node_t *cur_n;
+	shash_node_t *current_node;
 	int first = 1;
 
 	if (ht == NULL)
 		return;
 
 	printf("{");
-	if (direction == 0)
+	for (current_node = ht->shead; current_node != NULL; current_node = current_node->snext)
 	{
-		for (cur_n = ht->shead; cur_n != NULL; cur_n = cur_n->snext)
-		{
-			if (!first)
-				printf(", ");
-			printf("'%s': '%s'", cur_n->key, cur_n->value);
-			first = 0;
-		}
-	}
-	else if (direction == 1)
-	{
-		for (cur_n = ht->stail; cur_n != NULL; cur_n = cur_n->sprev)
-		{
-			if (!first)
-				printf(", ");
-			printf("'%s': '%s'", cur_n->key, cur_n->value);
-			first = 0;
-		}
+		if (!first)
+			printf(", ");
+		printf("'%s': '%s'", current_node->key, current_node->value);
+		first = 0;
 	}
 	printf("}\n");
 }
