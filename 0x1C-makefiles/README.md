@@ -1,6 +1,6 @@
 ---
-
-# alx-low_level_programming - Makefiles
+# 0x1C. C - Makefiles
+## alx-low_level_programming - Makefiles
 
 This repository contains a set of Makefiles and a Python script as part of the ALX Low Level Programming curriculum.
 
