@@ -21,20 +21,20 @@ while (current != NULL)
 prev = current;
 if (current->express == NULL || current->n >= value)
 {
-printf("Value checked at index [%lu] = [%d]\n", current->index, current->n);
+printf(" [%lu] = [%d]\n", current->index, current->n);
 if (current->n == value)
 return (current);
 break;
 }
-printf("Value checked at index [%lu] = [%d]\n", current->express->index, current->express->n);
+printf(" [%lu] = [%d]\n", current->express->index, current->express->n);
 current = current->express;
 }
 
-printf("Value found between indexes [%lu] and [%lu]\n", prev->index, current->index);
+printf(" [%lu] and [%lu]\n", prev->index, current->index);
 
 while (prev != NULL && prev->index <= current->index)
 {
-printf("Value checked at index [%lu] = [%d]\n", prev->index, prev->n);
+printf("[%lu] = [%d]\n", prev->index, prev->n);
 if (prev->n == value)
 return (prev);
 prev = prev->next;
