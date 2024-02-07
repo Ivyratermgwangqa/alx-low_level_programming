@@ -27,8 +27,8 @@ curr = curr->next;
 printf("Value checked at index [%lu] = [%d]\n", curr->index, curr->n);
 }
 
-printf("Value found between indexes [%lu] and [%lu]\n", prev->index, curr->index);
-printf("Value checked at index [%lu] = [%d]\n", prev->index, prev->n);
+printf("[%lu] and [%lu]\n", prev->index, curr->index);
+printf("[%lu] = [%d]\n", prev->index, prev->n);
 
 while (prev != NULL && prev->index <= curr->index)
 {
