@@ -11,44 +11,24 @@
 */
 int binary_search(int *array, size_t size, int value)
 {
-size_t left = 0, right = size - 1, mid;
+	int i, left, right;
 
-if (array == NULL)
-return (-1);
+	if (!array)
+		return (-1);
+	for (left = 0, right = (int)size - 1; right >= left;)
+	{
+		printf("Searching in array: ");
+		for (i = left; i < right; i++)
+			printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
 
-while (left <= right)
-{
-print_array(array, left, right);
-mid = (left + right) / 2;
-
-if (array[mid] == value)
-return (mid);
-else if (array[mid] < value)
-left = mid + 1;
-else
-right = mid - 1;
-}
-
-return (-1);
-}
-
-/**
-* print_array - Prints the elements of an array between left and right
-* @array: Pointer to the first element of the array
-* @left: Left index to start printing from
-* @right: Right index to stop printing at
-*/
-void print_array(int *array, size_t left, size_t right)
-{
-size_t i;
-
-printf("Searching in array:");
-for (i = left; i <= right; i++)
-{
-if (i == left)
-printf(" %d", array[i]);
-else
-printf(", %d", array[i]);
-}
-printf("\n");
+		i = left + (right - left) / 2;
+		if (array[i] == value)
+			return (i);
+		if (array[i] > value)
+			right = i - 1;
+		else
+			left = i + 1;
+	}
+	return (-1);
 }
