@@ -1,34 +1,49 @@
 #include "search_algos.h"
-#include <stdio.h>
+/**
+ * print_array - prints an array.
+ * @array: array to print
+ * @l: bottom of the array
+ * @r: top of the array
+ */
+void print_array(int *array, size_t l, size_t r)
+{
+	size_t i;
+
+	printf("Searching in array: ");
+	for (i = l; i <= r; i++)
+	{
+		if (i < r)
+			printf("%i, ", array[i]);
+		else
+			printf("%i\n", array[i]);
+	}
+}
 
 /**
-* binary_search - Searches for a value in a sorted array using binary search
-* @array: Pointer to the first element of the array to search in
-* @size: Number of elements in array
-* @value: Value to search for
-*
-* Return: Index of the value if found, -1 otherwise
-*/
+ * binary_search - Function that searches for a value in an array of integers
+ * using the Linear search algorithm
+ * @array: Array where to search.
+ * @size: size of the array.
+ * @value: value to find.
+ * Return: First index where value is located.
+ */
 int binary_search(int *array, size_t size, int value)
 {
-	int i, left, right;
+	size_t l = 0, r = size - 1,  m = 0;
 
-	if (!array)
+	if (array == NULL)
 		return (-1);
-	for (left = 0, right = (int)size - 1; right >= left;)
+	while (l <= r)
 	{
-		printf("Searching in array: ");
-		for (i = left; i < right; i++)
-			printf("%d, ", array[i]);
-		printf("%d\n", array[i]);
-
-		i = left + (right - left) / 2;
-		if (array[i] == value)
-			return (i);
-		if (array[i] > value)
-			right = i - 1;
+		print_array(array, l, r);
+		m = (l + r) / 2;
+		if (array[m] < value)
+			l = m + 1;
+		else if (array[m] > value)
+			r = m - 1;
 		else
-			left = i + 1;
+			return (m);
 	}
 	return (-1);
+
 }
