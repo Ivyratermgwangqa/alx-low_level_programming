@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "search_algos.h"
 int recurse_helper(int *array, size_t left,
 size_t right, int value, ssize_t *match);
