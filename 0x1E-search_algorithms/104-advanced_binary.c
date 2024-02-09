@@ -12,7 +12,7 @@
  */
 int recursive_advanced_binary(int *array, size_t left, size_t right, int value)
 {
-	size_t i;
+	size_t i, mid;
 
 	if (array == NULL || left > right)
 		return -1;
