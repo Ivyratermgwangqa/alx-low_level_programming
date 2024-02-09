@@ -31,16 +31,15 @@ int recursive_advanced_binary(int *array, size_t left, size_t right, int value)
 	if (array[mid] == value)
 	{
 		if (mid == 0 || array[mid - 1] != value)
-			return mid; // Value is the first occurrence
+			return mid;
 		else
-		return recursive_advanced_binary(array, left, mid, value); // Continue searching in the left half for the first occurrence
+			return recursive_advanced_binary(array, left, mid, value);
 	}
 	else if (array[mid] < value)
 		return recursive_advanced_binary(array, mid + 1, right, value);
 	else
-	return recursive_advanced_binary(array, left, mid - 1, value);
+		return recursive_advanced_binary(array, left, mid - 1, value);
 }
-
 /**
  * advanced_binary - Searches for a value in a sorted array of integers
  *                   using the Advanced Binary search algorithm
